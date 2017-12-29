@@ -27,13 +27,13 @@ public class CustomUserDetailsService implements UserDetailsService {
         // this data would typically be retrieved from a database
         this.accountDetails = new TreeMap<>();
         this.accountDetails.put("ted", "$2a$06$rtacOjuBuSlhnqMO2GKxW.Bs8J6KI0kYjw/gtF0bfErYgFyNTZRDm");
-        User user = new User("Jack Bauer", "Power", "Baddass St.", "Tought agent");
+        User user = new User("Jack Bauer", "Power", "Baddass St.", "Tough guy");
         userRepository.save(user);
-        User user2 = new User("Pornokeisari69", "Milontissit17", "Normikatu", "Kova tyyppi tekee pornoo");
+        User user2 = new User("SuperCaesar", "BuiltRomeInADay", "Rome", "Rules with an iron first");
         userRepository.save(user2);
-        User user3 = new User("Agentti Appelsiini", "Mehumies", "Mehukatu", "Tekee aina mehuu hommis");
+        User user3 = new User("Agent Mandarin", "Juiceman", "Juice Street", "Makes punch in every mission");
         userRepository.save(user3);
-        User user4 = new User("Swedupelle", "OlemmeMulkkuja", "Ruotsitie", "Mielii poikia");
+        User user4 = new User("Dupelle", "FunnyJoke", "Circus Road", "Funny person");
         userRepository.save(user4);
     }
 

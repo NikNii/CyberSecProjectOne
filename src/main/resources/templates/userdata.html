@@ -15,7 +15,7 @@
                 <ol style="list-style-type:none">
                     <li style="margin-left:-2.5em">Password: <span th:text="${item.password}">Password</span></li>
                     <li style="margin-left:-2.5em">Address: <span th:text="${item.address}">Address</span></li>
-                    <li style="margin-left:-2.5em">Description: <span th:text="${item.description}">Description</span></li>
+                    <li style="margin-left:-2.5em">Description: <span th:utext="${item.description}">Description</span></li>
                 </ol>
             </li>
         </ul>

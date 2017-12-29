@@ -1,16 +1,28 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
     <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Users</title>
     </head>
     <body>
-        <div>TODO write content</div>
+
+        <h1>Users</h1>
+        
+        <p>Here are the users registered on this site:</p>
+        
+        <ul>
+            <li th:each="item : ${users}">
+                <strong style="font-weight: bold; font-size: 19px"><span th:text="${item.name}">Name</span></strong> 
+                <ol style="list-style-type:none">
+                    <li style="margin-left:-2.5em">Address: <span th:text="${item.address}">Address</span></li>
+                    <li style="margin-left:-2.5em">Description: <span th:text="${item.description}">Description</span></li>
+                </ol>
+            </li>
+        </ul>
+        
+        <form action="#" th:action="@{/user}" method="POST">
+            <p><label for="name">Find Name</label>: <input type="text" name="name" id="name"/></p>
+            <p><input type="submit" value="Submit" /></p>
+        </form>
+        
     </body>
 </html>
