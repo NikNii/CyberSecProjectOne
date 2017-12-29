@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Users</title>
+    </head>
+    <body>
+
+        <h1>Users</h1>
+        
+        <p>Here are the users found from /userdata:</p>
+        
+        <ul id="users">
+            <li th:each="item : ${users}">
+                <strong style="font-weight: bold; font-size: 19px"><span th:text="${item.name}">Name</span></strong> 
+                <ol style="list-style-type:none">
+                    <li style="margin-left:-2.5em">Address: <span th:text="${item.address}">Address</span></li>
+                    <li style="margin-left:-2.5em">Description: <span th:utext="${item.description}">Description</span></li>
+                </ol>
+            </li>
+        </ul>
+        
+        <!--<input type="text" id="search" onkeyup="findUser()" placeholder="Search for users.."/> -->
+        
+    </body>
+</html>
+<!--
+<script>
+    function findUser() {
+        
+    }
+</script>
+-->
